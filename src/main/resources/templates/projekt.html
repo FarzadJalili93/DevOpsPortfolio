@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mina Senaste Projekt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .project {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .project h2 {
+            color: #007bff;
+        }
+        .project p {
+            font-size: 16px;
+            color: #555;
+        }
+        .project a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .project a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Mina Senaste Projekt</h1>
+
+<div th:each="project : ${projects}" class="project">
+    <h2 th:text="${project.name}"></h2>
+    <p th:text="${project.description}"></p>
+    <a th:href="${project.githubLink}" target="_blank">Se på GitHub</a>
+</div>
+
+</body>
+</html>
