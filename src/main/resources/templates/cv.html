@@ -1,19 +1,37 @@
-<main>
-  <section id="cv">
-    <h1>Mitt CV</h1>
-    <h2>Utbildning</h2>
-    <ul>
-      <li>Bachelor i [Ditt område], [Universitet], [År]</li>
-    </ul>
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mitt CV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .pdf-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    iframe {
+      width: 80%;
+      height: 800px;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
 
-    <h2>Arbetslivserfarenhet</h2>
-    <ul>
-      <li>[Jobbtitel], [Företag], [År]</li>
-    </ul>
+<h1>Mitt CV</h1>
+<div class="pdf-container">
+  <iframe src="/CV.pdf" type="application/pdf"></iframe>
+</div>
 
-    <h2>Färdigheter</h2>
-    <ul>
-      <li>Java, HTML, CSS, JavaScript</li>
-    </ul>
-  </section>
-</main>
+</body>
+</html>

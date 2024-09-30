@@ -2,7 +2,7 @@ package com.example.portfolio.controller;
 
 
 import com.example.portfolio.service.ProjektService;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,8 +10,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class PortfolioController {
 
-    @Autowired
-    private ProjektService projektService;
+    private final ProjektService projektService;
+
+    public PortfolioController(ProjektService projektService) {
+        this.projektService = projektService;
+    }
 
     @GetMapping("/")
     public String index() {
@@ -25,7 +28,7 @@ public class PortfolioController {
 
     @GetMapping("/projekt")
     public String projekt(Model model) {
-        model.addAttribute("projects", projektService.getProjects());
+        model.addAttribute("projects", projektService.fetchAllProjects());
         return "projekt";
     }
 }

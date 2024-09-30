@@ -1,26 +1,26 @@
 package com.example.portfolio.model;
 
 public class Projekt {
-    private String name;
-    private String description;
-    private String githubLink;
+    private final String title;
+    private final String details;
+    private final String repositoryUrl;
 
-    public Projekt(String name, String description, String githubLink) {
-        this.name = name;
-        this.description = description;
-        this.githubLink = githubLink;
+    public Projekt(String title, String details, String repositoryUrl) {
+        this.title = title;
+        this.details = details;
+        this.repositoryUrl = repositoryUrl;
     }
 
-    public String getName() {
-        return name;
+
+    public String getTitle() {
+        return title;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDetails() {
+        return details;
     }
 
-    public String getGithubLink() {
-        return githubLink;
+    public String getRepositoryUrl() {
+        return repositoryUrl;
     }
 }
-

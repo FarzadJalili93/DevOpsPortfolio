@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mina Senaste Projekt</title>
+    <title>My Latest Projects</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -43,13 +43,14 @@
 </head>
 <body>
 
-<h1>Mina Senaste Projekt</h1>
+<h1>My Latest Projects</h1>
 
 <div th:each="project : ${projects}" class="project">
-    <h2 th:text="${project.name}"></h2>
-    <p th:text="${project.description}"></p>
-    <a th:href="${project.githubLink}" target="_blank">Se på GitHub</a>
+    <h2 th:text="${project.title}">Project Title</h2>
+    <p th:text="${project.details}">Project Description</p>
+    <a th:href="${project.repositoryUrl}" target="_blank">View on GitHub</a>
 </div>
 
 </body>
 </html>
+
