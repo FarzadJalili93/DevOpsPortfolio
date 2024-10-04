@@ -16,10 +16,6 @@ public class PortfolioController {
         this.projektService = projektService;
     }
 
-    @GetMapping("/")
-    public String index() {
-        return "index";
-    }
 
     @GetMapping("/cv")
     public String cv() {

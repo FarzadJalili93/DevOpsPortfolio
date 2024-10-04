@@ -4,23 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Min Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
+
 <header>
-  <nav>
-    <ul>
-      <li><a href="index">Intro</a></li>
-      <li><a href="cv">CV</a></li>
-      <li><a href="projekt">Projekt</a></li>
-    </ul>
-  </nav>
+  <div th:replace="nav :: nav"></div>
 </header>
 
 <main>
+  <h1>Välkommen till min portfolio!</h1>
+  <p>Jag är Farzad Jalili, en passionerad systemutvecklare med erfarenhet inom Java och webbutveckling. Här kan du läsa mer om mina projekt, min bakgrund och ladda ner mitt CV.</p>
 
+  <section>
+    <h2>Om mig</h2>
+    <p>Jag är en Java-student och utvecklare med fokus på att bygga effektiva, användarvänliga system. Jag har arbetat med projekt inom API-integration, webbappar och objektorienterad programmering. Jag är nyfiken på ny teknik och älskar att lösa problem.</p>
+  </section>
+
+  <section>
+    <h2>Utforska mer</h2>
+    <a th:href="@{/cv}" class="button">Läs mitt CV</a>
+    <a th:href="@{/projekt}" class="button">Se mina projekt</a>
+  </section>
+
+
+  <section>
+    <h2>Mina kunskaper</h2>
+    <ul>
+      <li>Java & Spring Boot</li>
+      <li>RESTful API-utveckling</li>
+      <li>HTML, CSS & JavaScript</li>
+      <li>Versionkontroll (Git & GitHub)</li>
+    </ul>
+  </section>
 </main>
 
+<footer>
+  <p>Kontakta mig: <a href="mailto:farzad.jalili@yh.nackademin.se">farzad.jalili@yh.nackademin.se</a></p>
+  <p>Följ mig på <a href="https://www.linkedin.com/in/farzad-jalili-a72a3b172/">LinkedIn</a></p>
+</footer>
 
 </body>
 </html>

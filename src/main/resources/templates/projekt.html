@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Latest Projects</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -41,6 +42,11 @@
         }
     </style>
 </head>
+
+<header>
+    <div th:replace="nav :: nav"></div>
+</header>
+
 <body>
 
 <h1>My Latest Projects</h1>
